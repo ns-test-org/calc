@@ -149,36 +149,55 @@ body {
 }
 
 /* Animated Grid Background */
-@keyframes gridMove {
+.animated-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, #1a0b2e 0%, #16213e 50%, #0f3460 100%);
+  overflow: hidden;
+}
+
+.animated-grid::before,
+.animated-grid::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    linear-gradient(rgba(147, 51, 234, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 51, 234, 0.15) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove1 20s linear infinite;
+  pointer-events: none;
+}
+
+.animated-grid::after {
+  background-size: 30px 30px;
+  opacity: 0.6;
+  animation: gridMove2 15s linear infinite reverse;
+}
+
+@keyframes gridMove1 {
   0% {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(20px, 20px);
+    transform: translate(50px, 50px);
   }
 }
 
-.animated-grid {
-  background-image: 
-    linear-gradient(rgba(147, 51, 234, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(147, 51, 234, 0.08) 1px, transparent 1px);
-  background-size: 20px 20px;
-  animation: gridMove 8s linear infinite;
+@keyframes gridMove2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-30px, -30px);
+  }
 }
 
-.animated-grid::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(rgba(147, 51, 234, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(147, 51, 234, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  animation: gridMove 12s linear infinite reverse;
-  pointer-events: none;
-  z-index: -1;
-}
 
