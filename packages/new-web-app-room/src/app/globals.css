@@ -177,11 +177,11 @@ body {
   top: -10%;
   left: -10%;
   background-image: 
-    linear-gradient(rgba(34, 197, 94, 0.6) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 197, 94, 0.6) 1px, transparent 1px);
+    linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px);
   background-size: 40px 40px;
   animation: gridSlide1 20s linear infinite;
-  filter: drop-shadow(0 0 3px rgba(34, 197, 94, 0.4));
+  filter: drop-shadow(0 0 2px rgba(34, 197, 94, 0.2));
 }
 
 .grid-lines-2 {
@@ -191,11 +191,11 @@ body {
   top: -10%;
   left: -10%;
   background-image: 
-    linear-gradient(rgba(74, 222, 128, 0.4) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(74, 222, 128, 0.4) 1px, transparent 1px);
+    linear-gradient(rgba(74, 222, 128, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 222, 128, 0.2) 1px, transparent 1px);
   background-size: 60px 60px;
   animation: gridSlide2 25s linear infinite reverse;
-  filter: drop-shadow(0 0 4px rgba(74, 222, 128, 0.3));
+  filter: drop-shadow(0 0 2px rgba(74, 222, 128, 0.15));
 }
 
 .grid-lines-3 {
@@ -205,11 +205,11 @@ body {
   top: -10%;
   left: -10%;
   background-image: 
-    linear-gradient(rgba(134, 239, 172, 0.25) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(134, 239, 172, 0.25) 1px, transparent 1px);
+    linear-gradient(rgba(134, 239, 172, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(134, 239, 172, 0.15) 1px, transparent 1px);
   background-size: 80px 80px;
   animation: gridSlide3 30s linear infinite;
-  filter: drop-shadow(0 0 5px rgba(134, 239, 172, 0.2));
+  filter: drop-shadow(0 0 1px rgba(134, 239, 172, 0.1));
 }
 
 @keyframes gridSlide1 {
@@ -328,6 +328,9 @@ body {
   background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
   border-color: rgba(248, 113, 113, 0.4);
 }
+
+
+
 
 
 
