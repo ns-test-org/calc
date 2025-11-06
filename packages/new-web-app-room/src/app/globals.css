@@ -148,14 +148,14 @@ body {
   animation: bounce-horizontal 1.5s ease-in-out infinite;
 }
 
-/* Animated Neon Green Grid Background */
+/* Matrix Text Rain Background */
 .animated-grid-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, #0a0f0a 0%, #0d1b0d 50%, #0f2a0f 100%);
+  background: linear-gradient(135deg, #000000 0%, #001100 30%, #000000 100%);
   z-index: -2;
 }
 
@@ -168,63 +168,62 @@ body {
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #00ff41;
 }
 
-.grid-lines {
+.matrix-column {
   position: absolute;
-  width: 120%;
-  height: 120%;
-  top: -10%;
-  left: -10%;
-  background-image: 
-    linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px);
-  background-size: 40px 40px;
-  animation: gridSlide1 20s linear infinite;
-  filter: drop-shadow(0 0 2px rgba(34, 197, 94, 0.2));
+  top: -100vh;
+  white-space: nowrap;
+  animation: matrix-fall linear infinite;
+  text-shadow: 0 0 5px #00ff41;
+  opacity: 0.7;
+  line-height: 1.2;
 }
 
-.grid-lines-2 {
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  top: -10%;
-  left: -10%;
-  background-image: 
-    linear-gradient(rgba(74, 222, 128, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(74, 222, 128, 0.2) 1px, transparent 1px);
-  background-size: 60px 60px;
-  animation: gridSlide2 25s linear infinite reverse;
-  filter: drop-shadow(0 0 2px rgba(74, 222, 128, 0.15));
-}
+/* Matrix columns with different positions and timings */
+.matrix-column:nth-child(1) { left: 2%; animation-duration: 8s; animation-delay: 0s; }
+.matrix-column:nth-child(2) { left: 6%; animation-duration: 12s; animation-delay: 1s; }
+.matrix-column:nth-child(3) { left: 10%; animation-duration: 10s; animation-delay: 2s; }
+.matrix-column:nth-child(4) { left: 14%; animation-duration: 15s; animation-delay: 0.5s; }
+.matrix-column:nth-child(5) { left: 18%; animation-duration: 9s; animation-delay: 3s; }
+.matrix-column:nth-child(6) { left: 22%; animation-duration: 11s; animation-delay: 1.5s; }
+.matrix-column:nth-child(7) { left: 26%; animation-duration: 13s; animation-delay: 2.5s; }
+.matrix-column:nth-child(8) { left: 30%; animation-duration: 8s; animation-delay: 4s; }
+.matrix-column:nth-child(9) { left: 34%; animation-duration: 14s; animation-delay: 0.8s; }
+.matrix-column:nth-child(10) { left: 38%; animation-duration: 10s; animation-delay: 3.2s; }
+.matrix-column:nth-child(11) { left: 42%; animation-duration: 12s; animation-delay: 1.8s; }
+.matrix-column:nth-child(12) { left: 46%; animation-duration: 9s; animation-delay: 4.5s; }
+.matrix-column:nth-child(13) { left: 50%; animation-duration: 11s; animation-delay: 2.2s; }
+.matrix-column:nth-child(14) { left: 54%; animation-duration: 13s; animation-delay: 0.3s; }
+.matrix-column:nth-child(15) { left: 58%; animation-duration: 8s; animation-delay: 3.8s; }
+.matrix-column:nth-child(16) { left: 62%; animation-duration: 15s; animation-delay: 1.2s; }
+.matrix-column:nth-child(17) { left: 66%; animation-duration: 10s; animation-delay: 4.2s; }
+.matrix-column:nth-child(18) { left: 70%; animation-duration: 12s; animation-delay: 2.8s; }
+.matrix-column:nth-child(19) { left: 74%; animation-duration: 9s; animation-delay: 0.7s; }
+.matrix-column:nth-child(20) { left: 78%; animation-duration: 14s; animation-delay: 3.5s; }
+.matrix-column:nth-child(21) { left: 82%; animation-duration: 11s; animation-delay: 1.7s; }
+.matrix-column:nth-child(22) { left: 86%; animation-duration: 13s; animation-delay: 4.8s; }
+.matrix-column:nth-child(23) { left: 90%; animation-duration: 8s; animation-delay: 2.3s; }
+.matrix-column:nth-child(24) { left: 94%; animation-duration: 10s; animation-delay: 0.9s; }
 
-.grid-lines-3 {
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  top: -10%;
-  left: -10%;
-  background-image: 
-    linear-gradient(rgba(134, 239, 172, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(134, 239, 172, 0.15) 1px, transparent 1px);
-  background-size: 80px 80px;
-  animation: gridSlide3 30s linear infinite;
-  filter: drop-shadow(0 0 1px rgba(134, 239, 172, 0.1));
-}
-
-@keyframes gridSlide1 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(40px, 40px); }
-}
-
-@keyframes gridSlide2 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-60px, -60px); }
-}
-
-@keyframes gridSlide3 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(80px, -80px); }
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }
 
 /* Enhanced Calculator Styling - Make it POP! */
@@ -328,6 +327,7 @@ body {
   background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
   border-color: rgba(248, 113, 113, 0.4);
 }
+
 
 
 
