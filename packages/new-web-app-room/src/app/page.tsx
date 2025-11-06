@@ -80,8 +80,8 @@ export default function Calculator() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-sm">
+    <div className="min-h-screen bg-gray-100 animated-grid flex items-center justify-center p-4 relative">
+      <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 w-full max-w-sm relative z-10">
         <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Calculator</h1>
         
         {/* Display */}
@@ -209,4 +209,5 @@ export default function Calculator() {
     </div>
   );
 }
+
 

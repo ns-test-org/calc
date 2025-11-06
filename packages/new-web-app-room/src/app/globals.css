@@ -147,3 +147,38 @@ body {
 .animate-bounce-horizontal {
   animation: bounce-horizontal 1.5s ease-in-out infinite;
 }
+
+/* Animated Grid Background */
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
+}
+
+.animated-grid {
+  background-image: 
+    linear-gradient(rgba(147, 51, 234, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 51, 234, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: gridMove 8s linear infinite;
+}
+
+.animated-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(147, 51, 234, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 51, 234, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 12s linear infinite reverse;
+  pointer-events: none;
+  z-index: -1;
+}
+
