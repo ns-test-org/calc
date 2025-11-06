@@ -87,7 +87,7 @@ export default function Calculator() {
       {/* Main content */}
       <div className="min-h-screen flex items-center justify-center p-4 relative z-10">
         <div className="calculator-container p-8 w-full max-w-sm relative">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8 text-shadow">Calculator</h1>
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8 text-shadow">Coop's Calc</h1>
         
         {/* Display */}
         <div className="calculator-display p-6 mb-6">
@@ -215,6 +215,7 @@ export default function Calculator() {
     </>
   );
 }
+
 
 
 
