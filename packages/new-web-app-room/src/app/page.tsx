@@ -93,34 +93,34 @@ export default function Calculator() {
       
       {/* Main content */}
       <div className="min-h-screen flex items-center justify-center p-4 relative z-10">
-        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 w-full max-w-sm relative">
-        <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Calculator</h1>
+        <div className="calculator-container p-8 w-full max-w-sm relative">
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8 text-shadow">Calculator</h1>
         
         {/* Display */}
-        <div className="bg-gray-900 rounded-lg p-4 mb-4">
-          <div className="text-right text-white text-3xl font-mono overflow-hidden">
+        <div className="calculator-display p-6 mb-6">
+          <div className="text-right text-4xl font-mono overflow-hidden min-h-[60px] flex items-center justify-end">
             {display}
           </div>
         </div>
 
         {/* Button Grid */}
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-4 gap-4">
           {/* Row 1 */}
           <button
             onClick={clear}
-            className="col-span-2 bg-red-500 hover:bg-red-600 text-white font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="col-span-2 calculator-button calculator-button-clear py-5 px-4 text-lg font-bold"
           >
             Clear
           </button>
           <button
             onClick={() => inputOperation('÷')}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button calculator-button-operator py-5 px-4 text-xl font-bold"
           >
             ÷
           </button>
           <button
             onClick={() => inputOperation('×')}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button calculator-button-operator py-5 px-4 text-xl font-bold"
           >
             ×
           </button>
@@ -128,25 +128,25 @@ export default function Calculator() {
           {/* Row 2 */}
           <button
             onClick={() => inputNumber('7')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             7
           </button>
           <button
             onClick={() => inputNumber('8')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             8
           </button>
           <button
             onClick={() => inputNumber('9')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             9
           </button>
           <button
             onClick={() => inputOperation('-')}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button calculator-button-operator py-5 px-4 text-xl font-bold"
           >
             -
           </button>
@@ -154,25 +154,25 @@ export default function Calculator() {
           {/* Row 3 */}
           <button
             onClick={() => inputNumber('4')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             4
           </button>
           <button
             onClick={() => inputNumber('5')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             5
           </button>
           <button
             onClick={() => inputNumber('6')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             6
           </button>
           <button
             onClick={() => inputOperation('+')}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button calculator-button-operator py-5 px-4 text-xl font-bold"
           >
             +
           </button>
@@ -180,25 +180,25 @@ export default function Calculator() {
           {/* Row 4 */}
           <button
             onClick={() => inputNumber('1')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             1
           </button>
           <button
             onClick={() => inputNumber('2')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             2
           </button>
           <button
             onClick={() => inputNumber('3')}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             3
           </button>
           <button
             onClick={performCalculation}
-            className="row-span-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="row-span-2 calculator-button calculator-button-equals py-5 px-4 text-2xl font-bold"
           >
             =
           </button>
@@ -206,13 +206,13 @@ export default function Calculator() {
           {/* Row 5 */}
           <button
             onClick={() => inputNumber('0')}
-            className="col-span-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="col-span-2 calculator-button py-5 px-4 text-xl font-bold"
           >
             0
           </button>
           <button
             onClick={inputDecimal}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-4 rounded-lg transition-colors"
+            className="calculator-button py-5 px-4 text-xl font-bold"
           >
             .
           </button>
@@ -222,6 +222,11 @@ export default function Calculator() {
     </>
   );
 }
+
+
+
+
+
 
 
 
